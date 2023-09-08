@@ -47,6 +47,76 @@ header {
 #navbar a:hover {
     color: #ff0000;
 }
+/* Style the Stock Market Overview Section */
+.market-overview {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Style the Company Logo Box */
+.company-logo-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Style each Company Box */
+.company {
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out; /* Add a transition for smooth movement */
+}
+
+.company:hover {
+    transform: scale(1.05); /* Increase the size slightly on hover */
+}
+
+.company img {
+    max-width: 60px;
+    height: auto;
+}
+
+.company p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Style the "View Stock Prices" button */
+.view-button {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px; /* Add space below the button */
+}
+
+.btn-view {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 20px 40px; /* Increase padding for a larger button */
+    font-size: 24px; /* Increase font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, opacity 0.2s ease; /* Add transitions for background color, transform, and opacity */
+    animation: blink 2s infinite; /* Add a blinking animation */
+}
+
+.btn-view:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Add a slight scale-up animation on hover */
+    opacity: 0.9; /* Reduce opacity on hover for a subtle effect */
+}
+
+/* Define the blinking animation */
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
 
 /* Main Content Styles */
 .main-content {
