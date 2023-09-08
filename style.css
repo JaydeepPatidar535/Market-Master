@@ -189,6 +189,24 @@ header {
     text-align: center;
 }
 
+/* Style the market analysis section */
+.market-analysis {
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+/* Style the widget container */
+.widget-container {
+    display: flex;
+    justify-content: space-between; /* Arrange widgets horizontally with space in between */
+}
+
+/* Style each widget */
+.widget {
+    flex: 1;
+    margin-right: 10px; /* Add spacing between widgets */
+}
+
 
 /* Style the footer */
 footer {
