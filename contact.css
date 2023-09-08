@@ -116,9 +116,11 @@ footer {
 
 /* Contact Form Styles */
 .contact-form {
-    max-width: 400px;
-    margin: 105px auto 0; /* Adjust the margin-top for spacing */
+    max-width: 600px;
+    max-height: 550px;
+    margin: 120px auto; /* Adjust the margin-top for spacing */
     padding: 30px;
+    margin-bottom: 50px;
     background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
