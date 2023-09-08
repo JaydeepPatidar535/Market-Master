@@ -1,0 +1,29 @@
+h3{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 50px;
+  }
+p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  #developer {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  #Developer img{
+    text-align: center;
+    margin-right: 20px;
+    margin-bottom: 30px;
+  }
+.image {
+    width: 200px;
+    height: 245px;
+    border-radius: 50%;
+    object-fit: cover;
+   
+  }
