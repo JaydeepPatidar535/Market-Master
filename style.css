@@ -117,6 +117,9 @@ header {
     padding: 20px;
     background-color: #f4f4f4;
 }
+.market-overview h2{
+    font-size: 40px;
+}
 
 /* Style the Company Logo Box */
 .company-logo-box {
@@ -188,11 +191,21 @@ header {
     padding: 20px;
     text-align: center;
 }
-
+/*featured stock section*/
+.featured-stocks h2{
+    font-size: 40px;
+}
+/*Market news section*/
+.market-news h2{
+    font-size: 40px;
+}
 /* Style the market analysis section */
 .market-analysis {
     background-color: #f5f5f5;
     padding: 20px;
+}
+.market-analysis h1{
+  font-size: 40px;
 }
 
 /* Style the widget container */
@@ -272,3 +285,4 @@ footer {
 @media (min-width: 1024px) {
     /* Adjust styles for large screens here */
 }
+
