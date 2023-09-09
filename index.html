@@ -9,6 +9,7 @@
     />
     <link rel="icon" href="images/logo.png" />
     <link rel="stylesheet" href="style.css" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
@@ -51,7 +52,27 @@
         </div>
       </nav>
     </header>
-
+    <!-- Login Popup -->
+    <div id="login-popup" class="popup">
+      <div class="popup-content">
+        <span class="close" id="close-popup">&times;</span>
+        <!-- Add your login form here -->
+        <h2>Login with MarketMaster</h2>
+        <form id="login-form">
+          <!-- Username and password fields -->
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+          <br />
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+          <br />
+          <input type="submit" value="Login" />
+        </form>
+        
+        <script src="login.js"></script>
+      </div>
+    </div>
+    
     <!-- Main Content (Stock Market Prices and Analysis) -->
     <section class="main-content">
       <div class="ct">

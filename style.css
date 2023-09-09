@@ -286,3 +286,122 @@ footer {
     /* Adjust styles for large screens here */
 }
 
+/* Styles for the login popup */
+/* Styles for the login popup */
+#login-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px; /* Curved edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%; /* Increase the width percentage */
+    max-width: 400px; /* Set a maximum width */
+    text-align: center; /* Center align text */
+    align-items: center;
+}
+
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #555;
+}
+
+.close:hover {
+    color: #333;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Styles for the login form inside the popup */
+#login-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#login-form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+#login-form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+#login-form .form-error {
+    color: #ff0000;
+    margin-top: 5px;
+}
+
+#login-form .form-success {
+    color: #009900;
+    margin-top: 5px;
+}
+
+#login-form .form-group {
+    position: relative;
+}
+
+#login-form .show-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #333;
+}
+
+/* Style for password visibility toggle icon */
+#login-form .show-password i {
+    font-size: 20px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 480px) {
+    .popup-content {
+        max-width: 100%;
+    }
+}
+
