@@ -1,20 +1,31 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve form data
     $name = $_POST["name"];
     $email = $_POST["email"];
     $message = $_POST["message"];
     
-    $to = "jaydeeppatidar535@gmail.com"; // Replace with your email address
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "Content-Type: text/html\r\n";
-    
-    $mailSent = mail($to, $message, $headers);
-    
-    if ($mailSent) {
-        echo "Your message has been sent successfully!";
+    // Email recipient (your email address)
+    $to = "jaydeeppatidar535@gmail.com";
+
+    // Email subject
+    $subject = "Contact Form Submission from $name";
+
+    // Email message
+    $email_message = "Name: $name\n";
+    $email_message .= "Email: $email\n";
+    $email_message .= "Message:\n$message";
+
+    // Additional headers
+    $headers = "From: $email";
+
+    // Send the email
+    if (mail($to, $subject, $email_message, $headers)) {
+        // Email sent successfully
+        echo "Thank you, $name! Your message has been sent.";
     } else {
-        echo "Sorry, there was an error sending your message.";
+        // Email sending failed
+        echo "Sorry, there was an issue sending your message. Please try again later.";
     }
 }
 ?>
