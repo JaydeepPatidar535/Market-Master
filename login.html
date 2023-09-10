@@ -1,69 +1,75 @@
-<div class="modal-content">
-    <div class="modal-header">
-        <h5 class="modal-title" id="signup-heading">Signup with MarketMaster</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-        </button>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="modal-body">
-        <form id="signup-form" class="form" role="form">
-            <div class="input-group form-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">
-                        <i class="fas fa-user"></i>
-                    </span>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <link rel="icon" href="images/logo.png" />
+    <link rel="stylesheet" href="login.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <title>MarketMaster - Invest Like Master</title>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="container">
+                <div id="logo">
+                    <a href="index.html"><img src="images/logo.png" alt="MarketMaster Logo" /></a>
                 </div>
-                <input type="text" class="form-control" name="full_name" placeholder="Full Name" maxlength="30" required="">
+                <ul id="navbar">
+                    <li>
+                        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+                    </li>
+                    <li>
+                        <a href="contactus.html"><i class="fas fa-envelope"></i> Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+                    </li>
+                    <li>
+                        <a href="signup.html"><i class="fas fa-user-plus"></i> Sign Up</a>
+                    </li>
+                </ul>
             </div>
-
-            <div class="input-group form-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">
-                        <i class="fas fa-phone-alt"></i>
-                    </span>
-                </div>
-                <input type="text" class="form-control" name="phone" placeholder="Phone Number" maxlength="10" minlength="10" required="">
-            </div>
-
-            <div class="input-group form-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">
-                        <i class="fas fa-envelope"></i>
-                    </span>
-                </div>
-                <input type="email" class="form-control" name="email" placeholder="Email" required="">
-            </div>
-
-            <div class="input-group form-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">
-                        <i class="fas fa-lock"></i>
-                    </span>
-                </div>
-                <input type="password" class="form-control" name="password" placeholder="Password" minlength="6" required="">
-            </div>
-
-            <div class="form-group">
-                <span>I'm a</span>
-                <input type="radio" class="ml-3" id="gender-male" name="gender" value="male"> Male
-                <label for="gender-male">
-                </label>
-                <input type="radio" class="ml-3" id="gender-female" name="gender" value="female">
-                <label for="gender-female">
-                    Female
-                </label>
-            </div>
-
-            <div class="form-group">
-                <button type="submit" class="btn btn-block btn-primary">Create Account</button>
-            </div>
+        </nav>
+    </header>
+    <div class="login-container">
+        <h2>Login with Market Master</h2>
+        <form id="login-form">
+            <label for="email"><i class="fas fa-envelope"></i> Email</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="password"><i class="fas fa-lock"></i> Password</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <input type="submit" value="Login">
+            <p>Not registered yet? <a href="signup.html">Sign Up</a></p>
         </form>
-    </div>
+      </div>
+   
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2023 MarketMaster. All rights reserved.</p>
 
-    <div class="modal-footer">
-        <span>Already have an account?
-            <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#login-modal">Login</a>
-        </span>
-    </div>
-</div>
+                <div class="footer-icons">
+                    <a href="mailto:jaydeeppatidar535@gmail.com" class="footer-icon">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://github.com/JaydeepPatidar535/Market-Master" target="_blank" class="footer-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <p>Contact: +91 9644190657</p>
+            </div>
+        </footer>
+</body>
+
+</html>
