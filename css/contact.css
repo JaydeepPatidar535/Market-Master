@@ -116,7 +116,7 @@ footer {
 
 /* Contact Form Styles */
 .contact-form {
-    max-width: 600px;
+    max-width: 500px;
     max-height: 550px;
     margin: 120px auto; /* Adjust the margin-top for spacing */
     padding: 30px;
