@@ -83,15 +83,16 @@ nav {
 /* Add styles for the dashboard content and footer as needed */
 .patterns {
     height: 50vh;
+    width: auto;
   }
   
   svg text {
     font-family: Lora;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
     stroke: #ffa5d8;
-    font-size: 150px;
+    font-size: 130px;
     font-weight: 700;
-    stroke-width: 3;
+    stroke-width: 2;
    
     animation: textAnimate 1s infinite alternate;
     
