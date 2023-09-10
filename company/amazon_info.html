@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="company.css">
+    
+    <link rel="icon" href="images/logo.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>User Dashboard</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="dashboard.html"><img src="images/logo.png" alt="Company Logo"></a>
+            </div>
+            <div class="user-profile">
+                <span class="welcome-message">Welcome to MarketMaster <i class="fas fa-user-circle"></i></span>
+                
+            </div>
+            <div class="logout">
+                <a href="index.html">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div id="container">
+        <div id="stock-data">
+            <h2>Company Name: <span id="company-name">Loading...</span></h2>
+            <p>Symbol: <span id="symbol">Loading...</span></p>
+            <p>Current Price: <span id="current-price">Loading...</span></p>
+            <p>Open Price: <span id="open-price">Loading...</span></p>
+            <p>High Price: <span id="high-price">Loading...</span></p>
+            <p>Low Price: <span id="low-price">Loading...</span></p>
+        </div>
+    </div>
+    <script>
+        // Replace with your stock market data API integration logic
+        // Example: Fetch data from Alpha Vantage API
+        const apiKey = 'YOUR_API_KEY';
+        const symbol = 'AMZN'; // Replace with the stock symbol you want to track
+
+        fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${symbol}&interval=5min&apikey=${apiKey}`)
+            .then(response => response.json())
+            .then(data => {
+                const metaData = data['Meta Data'];
+                const timeSeries = data['Time Series (5min)'];
+                const lastRefreshed = metaData['3. Last Refreshed'];
+                const latestData = timeSeries[lastRefreshed];
+
+                document.getElementById('company-name').textContent = metaData['2. Symbol'];
+                document.getElementById('symbol').textContent = metaData['2. Symbol'];
+                document.getElementById('current-price').textContent = latestData['1. open'];
+                document.getElementById('open-price').textContent = latestData['1. open'];
+                document.getElementById('high-price').textContent = latestData['2. high'];
+                document.getElementById('low-price').textContent = latestData['3. low'];
+            })
+            .catch(error => {
+                console.error('Error fetching stock data:', error);
+            });
+    </script>
+    <footer>
+        
+        <div class="footer-content">
+          <p>&copy; 2023 MarketMaster. All rights reserved.</p>
+  
+          <div class="footer-icons">
+            <a href="mailto:jaydeeppatidar535@gmail.com" class="footer-icon">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a
+              href="https://github.com/JaydeepPatidar535/Market-Master"
+              target="_blank"
+              class="footer-icon"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <p>Contact: +91 9644190657</p>
+        </div>
+     
+</footer>
+</body>
+</html>
