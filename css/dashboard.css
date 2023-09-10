@@ -93,7 +93,7 @@ nav {
     font-weight: 700;
     stroke-width: 3;
    
-    animation: textAnimate 2s infinite alternate;
+    animation: textAnimate 1s infinite alternate;
     
   }
   
@@ -204,17 +204,34 @@ nav {
 }
 
 /* Style for the "Apply Filter" button */
-#apply-filter {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+
+
+.view-button {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px; /* Add space below the button */
 }
 
-#apply-filter:hover {
-    background-color: #555;
+.btn-view {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 20px 40px; /* Increase padding for a larger button */
+    font-size: 24px; /* Increase font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, opacity 0.2s ease; /* Add transitions for background color, transform, and opacity */
+    animation: blink 2s infinite; /* Add a blinking animation */
+}
+
+.btn-view:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Add a slight scale-up animation on hover */
+    opacity: 0.9; /* Reduce opacity on hover for a subtle effect */
+}
+
+/* Define the blinking animation */
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
 }

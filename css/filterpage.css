@@ -132,11 +132,18 @@ footer {
 h1 {
     text-align: center;
 }
+
 /* Style the Selected Company Boxes */
-/* Style the Selected Company Boxes */
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
 .selected-company-box {
+    width: 30%;
+    margin: 10px;
     text-align: center;
-    margin: 20px;
     background-color: #fff;
     padding: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
@@ -150,10 +157,8 @@ h1 {
 }
 
 .selected-company-box img {
-    max-width: 100px;
-    max-height: 100px;
-    display: block;
-    margin: 0 auto;
+    max-width: 60px;
+    height: auto;
 }
 
 .selected-company-box p {
@@ -162,3 +167,4 @@ h1 {
 }
 
 /* Add more styles as needed */
+

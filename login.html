@@ -52,9 +52,22 @@
             <label for="password"><i class="fas fa-lock"></i> Password</label>
             <input type="password" id="password" name="password" required>
             <br>
-            <input type="submit" value="Login">
+            <input type="submit" value="Login" id="loginButton">
             <p>Not registered yet? <a href="signup.html">Sign Up</a></p>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const loginButton = document.getElementById('loginButton');
 
+                    // Add a click event listener to the login button
+                    loginButton.addEventListener('click', function (e) {
+                        e.preventDefault(); // Prevent the form submission
+
+                        // Replace 'desired_url.html' with the URL you want to redirect to
+                        window.location.href = 'dashboard.html';
+                    });
+                });
+
+            </script>
         </form>
     </div>
 
