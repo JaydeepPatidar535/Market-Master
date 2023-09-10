@@ -1,0 +1,220 @@
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/* Style the header and navigation bar */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 80px; /* Adjust the height as needed */
+    width: 150px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.user-profile span {
+    margin-right: 10px;
+}
+
+.logout a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.logout a i {
+    margin-right: 5px;
+}
+
+.welcome-message {
+    font-size: 24px; /* Increase the font size */
+    color: #ffffff; /* Change the text color */
+    opacity: 0; /* Initially, set the opacity to 0 to hide the text */
+    animation: fadeIn 1s ease-in-out forwards, blink 2s infinite; /* Apply both animations */
+}
+
+/* Define the fadeIn animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with full transparency */
+    }
+    to {
+        opacity: 1; /* End with full visibility */
+    }
+}
+
+/* Define the blink animation */
+@keyframes blink {
+    0% {
+        opacity: 1; /* Fully visible */
+    }
+    50% {
+        opacity: 0; /* Completely hidden */
+    }
+    100% {
+        opacity: 1; /* Fully visible again */
+    }
+}
+
+
+
+/* Add styles for the dashboard content and footer as needed */
+.patterns {
+    height: 50vh;
+  }
+  
+  svg text {
+    font-family: Lora;
+    letter-spacing: 10px;
+    stroke: #ffa5d8;
+    font-size: 150px;
+    font-weight: 700;
+    stroke-width: 3;
+   
+    animation: textAnimate 2s infinite alternate;
+    
+  }
+  
+  @keyframes textAnimate {
+    0% {
+      stroke-dasharray: 0 50%;
+      stroke-dashoffset:  20%;
+      fill:hsl(189, 68%, 75%)
+  
+    }
+    
+    100% {
+      stroke-dasharray: 50% 0;
+      stroke-dashoffstet: -20%;
+      fill: hsla(189, 68%, 75%,0%)
+    }
+    
+  }
+
+
+
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 0;
+}
+
+/* Style the footer content */
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the copyright notice */
+.footer-content p:first-child {
+    flex: 1;
+    margin: 0;
+}
+
+/* Style the contact number link */
+.footer-content p:last-child {
+    flex: 1;
+    margin: 0;
+}
+
+/* Style the footer icons container */
+.footer-icons {
+    flex: 1;
+    
+    margin: 0;
+}
+
+/* Style the footer icons */
+.footer-icon {
+    margin-left: 10px;
+    color: white; /* Set the icon color to white */
+    text-decoration: none;
+    font-size: 24px;
+}
+
+/* Style the GitHub icon */
+.footer-icon:first-child {
+    margin-left: 0; /* Remove left margin for the first icon */
+}
+
+
+/* Style the Company Logo Box */
+.company-logo-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Style each Company Box */
+.company {
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out; /* Add a transition for smooth movement */
+}
+
+.company:hover {
+    transform: scale(1.05); /* Increase the size slightly on hover */
+}
+
+.company img {
+    max-width: 60px;
+    height: auto;
+}
+
+.company p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.company.selected {
+    border: 2px solid #FF5733; /* Add a border to indicate selection */
+}
+
+/* Style for the "Apply Filter" button */
+#apply-filter {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#apply-filter:hover {
+    background-color: #555;
+}

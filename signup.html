@@ -1,62 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    
-    <link rel="icon" href="images/logo.png" />
-    <link rel="stylesheet" href="css/signup.css" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <title>MarketMaster - Invest Like Master</title>
-  </head>
-  <body>
-    <!-- Navigation Bar -->
-    <header>
-      <nav>
-        <div class="container">
-          <div id="logo">
-            <a href="index.html"
-              ><img src="images/logo.png" alt="MarketMaster Logo"
-            /></a>
-          </div>
-          <ul id="navbar">
-            <li>
-              <a href="index.html"><i class="fas fa-home"></i> Home</a>
-            </li>
-            <li>
-              <a href="about.html"
-                ><i class="fas fa-info-circle"></i> About Us</a
-              >
-            </li>
-            <li>
-              <a href="contactus.html"
-                ><i class="fas fa-envelope"></i> Contact Us</a
-              >
-            </li>
-            <li>
-              <a href="login.html" 
-                ><i class="fas fa-sign-in-alt"></i> Login</a
-              >
-            </li>
-            <li>
-              <a href="signup.html"><i class="fas fa-user-plus"></i> Sign Up</a>
-            </li>
-          </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  <link rel="icon" href="images/logo.png" />
+  <link rel="stylesheet" href="css/signup.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <title>MarketMaster - Invest Like Master</title>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <div class="container">
+        <div id="logo">
+          <a href="index.html"><img src="images/logo.png" alt="MarketMaster Logo" /></a>
         </div>
-      </nav>
-    </header>
-</div>
-<div class="signup-container">
-  <h2>Sign Up with Market Master</h2>
-  <form id="signup-form">
+        <ul id="navbar">
+          <li>
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+          </li>
+          <li>
+            <a href="contactus.html"><i class="fas fa-envelope"></i> Contact Us</a>
+          </li>
+          <li>
+            <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+          </li>
+          <li>
+            <a href="signup.html"><i class="fas fa-user-plus"></i> Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  </div>
+  <div class="signup-container">
+    <h2>Sign Up with Market Master</h2>
+    <form id="signup-form">
       <label for="name"><i class="fas fa-user"></i> Name</label>
       <input type="text" id="name" name="name" required>
       <br>
@@ -69,32 +57,63 @@
       <label for="password"><i class="fas fa-lock"></i> Password</label>
       <input type="password" id="password" name="password" required>
       <br>
-      <input type="submit" value="Sign Up">
-      <p>Already have an account? <a href="login.html">Login</a></p> 
-  </form>
-  
-</div>
-</div>
+      <input type="submit" value="Sign Up" id="submit">
+      <p>Already have an account? <a href="login.html">Login</a></p>
+    </form>
+    <script type="module">
 
-    <footer>
-        <div class="footer-content">
-          <p>&copy; 2023 MarketMaster. All rights reserved.</p>
-  
-          <div class="footer-icons">
-            <a href="mailto:jaydeeppatidar535@gmail.com" class="footer-icon">
-              <i class="fas fa-envelope"></i>
-            </a>
-            <a
-              href="https://github.com/JaydeepPatidar535/Market-Master"
-              target="_blank"
-              class="footer-icon"
-            >
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
-          <p>Contact: +91 9644190657</p>
-        </div>
-      </footer>
-    </body>
-  </html>
-  
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+      import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
+
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyARe_4HJriqnoKuEk4_9kFdzjcfMRzROvo",
+        authDomain: "marketmaster360-b9552.firebaseapp.com",
+        databaseURL: "https://marketmaster360-b9552-default-rtdb.firebaseio.com",
+        projectId: "marketmaster360-b9552",
+        storageBucket: "marketmaster360-b9552.appspot.com",
+        messagingSenderId: "756092224862",
+        appId: "1:756092224862:web:0c8605a266d6fd36197bcf"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+
+      const db = getDatabase(app)
+
+      document.getElementById("submit").addEventListener('click', function (e) {
+        e.preventDefault();
+        set(ref(db, 'user/' + document.getElementById("name").value),
+          {
+            email: document.getElementById("email").value,
+            name: document.getElementById("name").value,
+            PhoneNumber: document.getElementById("phone").value,
+            password: document.getElementById("password").value
+
+          })
+        alert("Signup Sucessfully please login ! ")
+      })
+    </script>
+
+  </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2023 MarketMaster. All rights reserved.</p>
+
+      <div class="footer-icons">
+        <a href="mailto:jaydeeppatidar535@gmail.com" class="footer-icon">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://github.com/JaydeepPatidar535/Market-Master" target="_blank" class="footer-icon">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <p>Contact: +91 9644190657</p>
+    </div>
+  </footer>
+</body>
+
+</html>

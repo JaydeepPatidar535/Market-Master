@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="js/dashboard.js"></script>
+    <link rel="icon" href="images/logo.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>User Dashboard</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="dashboard.html"><img src="images/logo.png" alt="Company Logo"></a>
+            </div>
+            <div class="user-profile">
+                <span class="welcome-message">Welcome to MarketMaster <i class="fas fa-user-circle"></i></span>
+                
+            </div>
+            <div class="logout">
+                <a href="index.html">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Dashboard content goes here -->
+    <div class="patterns">
+        <svg width="100%" height="100%">
+       <text x="50%" y="60%"  text-anchor="middle"  >
+         Choose the Company
+       </text>
+       </svg>
+      </div>
+
+        <!-- Company Logo Box -->
+    <div class="company-logo-box">
+        <!-- Company 1 -->
+        <div class="company" onclick="toggleCompany(this)">
+          <img src="images/amazon.png" alt="Company 1 Logo" />
+          <p>Amazon</p>
+        </div>
+  
+        <!-- Company 2 -->
+        <div class="company" onclick="toggleCompany(this)">
+          <img src="images/adani.png" alt="Company 2 Logo" />
+          <p>Adani</p>
+        </div>
+  
+        <!-- Company 3 -->
+        <div class="company" onclick="toggleCompany(this)">
+          <img src="images/apple.png" alt="Company 2 Logo" />
+          <p>Apple</p>
+        </div>
+  
+        <!-- Company 4 -->
+        <div class="company" onclick="toggleCompany(this)">
+          <img src="images/google.png" alt="Company 2 Logo" />
+          <p>Google</p>
+        </div>
+  
+        <!-- Company 5 -->
+        <div class="company" onclick="toggleCompany(this)">
+          <img src="images/tcs.png" alt="Company 2 Logo" />
+          <p>Tata consultancy services</p>
+        </div>
+  
+        <!-- Company 6 -->
+        <div class="company" onclick="toggleCompany(this)">
+          <img src="images/ibm.png" alt="Company 2 Logo" />
+          <p>IBM</p>
+        </div>
+  
+        <div class="company">
+            <img src="images/ibm.png" alt="Company 2 Logo" />
+            <p>IBM</p>
+        </div>
+
+        <div class="company">
+            <img src="images/ibm.png" alt="Company 2 Logo" />
+            <p>IBM</p>
+        </div>
+
+        <div class="company">
+            <img src="images/ibm.png" alt="Company 2 Logo" />
+            <p>IBM</p>
+        </div>
+
+        <div class="company">
+            <img src="images/ibm.png" alt="Company 2 Logo" />
+            <p>IBM</p>
+        </div>
+
+        <div class="company">
+            <img src="images/ibm.png" alt="Company 2 Logo" />
+            <p>IBM</p>
+        </div>
+
+        <div class="company">
+            <img src="images/ibm.png" alt="Company 2 Logo" />
+            <p>IBM</p>
+        </div>
+
+        <div class="company">
+            <img src="images/ibm.png" alt="Company 2 Logo" />
+            <p>IBM</p>
+        </div>
+
+        <div class="company">
+            <img src="images/ibm.png" alt="Company 2 Logo" />
+            <p>IBM</p>
+        </div>
+
+        <div class="company">
+            <img src="images/ibm.png" alt="Company 2 Logo" />
+            <p>IBM</p>
+        </div>
+
+        <div class="company">
+            <img src="images/ibm.png" alt="Company 2 Logo" />
+            <p>IBM</p>
+        </div>
+
+        <div class="company">
+            <img src="images/ibm.png" alt="Company 2 Logo" />
+            <p>IBM</p>
+        </div><div class="company">
+            <img src="images/ibm.png" alt="Company 2 Logo" />
+            <p>IBM</p>
+        </div>
+
+        <div class="company">
+            <img src="images/ibm.png" alt="Company 2 Logo" />
+            <p>IBM</p>
+        </div>
+
+        <div class="company">
+            <img src="images/ibm.png" alt="Company 2 Logo" />
+            <p>IBM</p>
+        </div>
+
+        <div class="company">
+            <img src="images/ibm.png" alt="Company 2 Logo" />
+            <p>IBM</p>
+        </div>
+
+        <div class="company">
+            <img src="images/ibm.png" alt="Company 2 Logo" />
+            <p>IBM</p>
+        </div>
+
+        <div class="company">
+            <img src="images/ibm.png" alt="Company 2 Logo" />
+            <p>IBM</p>
+        </div>
+
+        <div class="company">
+            <img src="images/ibm.png" alt="Company 2 Logo" />
+            <p>IBM</p>
+        </div>
+
+      </div>
+      <button id="apply-filter" onclick="applyFilter()">Apply Filter</button>
+    
+      <script src="dashboard.js"></script>
+    <footer>
+        
+            <div class="footer-content">
+              <p>&copy; 2023 MarketMaster. All rights reserved.</p>
+      
+              <div class="footer-icons">
+                <a href="mailto:jaydeeppatidar535@gmail.com" class="footer-icon">
+                  <i class="fas fa-envelope"></i>
+                </a>
+                <a
+                  href="https://github.com/JaydeepPatidar535/Market-Master"
+                  target="_blank"
+                  class="footer-icon"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+              <p>Contact: +91 9644190657</p>
+            </div>
+         
+    </footer>
+</body>
+</html>
