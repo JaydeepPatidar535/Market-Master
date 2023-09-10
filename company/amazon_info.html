@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="company.css">
     
-    <link rel="icon" href="images/logo.png" />
+    <link rel="icon" href="../images/logo.png" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <title>User Dashboard</title>
 </head>
@@ -14,7 +14,7 @@
     <header>
         <nav>
             <div class="logo">
-                <a href="../dashboard.html"><img src="images/logo.png" alt="Company Logo"></a>
+                <a href="../dashboard.html"><img src="../images/logo.png" alt="Company Logo"></a>
             </div>
             <div class="user-profile">
                 <span class="welcome-message">Welcome to MarketMaster <i class="fas fa-user-circle"></i></span>
@@ -64,6 +64,30 @@
                 console.error('Error fetching stock data:', error);
             });
     </script>
+    <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_a657c"></div>
+  <div class="tradingview-widget-copyright"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.widget(
+  {
+    "width": 780,
+  "height": 610,
+  "symbol": "AMZN",
+  "interval": "D",
+  "timezone": "Etc/UTC",
+  "theme": "light",
+  "style": "1",
+  "locale": "in",
+  "enable_publishing": false,
+  "allow_symbol_change": false,
+  "container_id": "tradingview_a657c"
+}
+  );
+  </script>
+</div>
+<!-- TradingView Widget END -->
     <footer>
         
         <div class="footer-content">

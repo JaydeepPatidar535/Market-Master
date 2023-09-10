@@ -136,3 +136,27 @@ footer {
     padding: 20px;
     background-color: #fff;
 }
+
+/* Style the container */
+.tradingview-widget-container {
+  max-width: 800px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the widget horizontally */
+  padding: 20px; /* Add some padding for spacing */
+  border: 1px solid #ccc; /* Add a border for separation */
+  border-radius: 5px; /* Round the corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  margin-bottom: 20px;
+}
+
+/* Style the copyright text */
+.tradingview-widget-copyright {
+  margin-top: 10px; /* Add some spacing above the copyright text */
+  text-align: center; /* Center-align the copyright text */
+}
+
+/* Style the TradingView widget itself (iframe) */
+#tradingview_26052 {
+  width: 100%; /* Make the widget expand to the container's width */
+  height: 600px; /* Adjust the height as needed (increased to 600px) */
+  border: none; /* Remove the border around the widget */
+}
