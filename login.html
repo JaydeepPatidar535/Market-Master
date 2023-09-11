@@ -2,77 +2,61 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-firestore-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-auth-compat.js"></script>
-    <link rel="icon" href="images/logo.png" />
-    <link rel="stylesheet" href="css/login.css" />
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
-    <title>MarketMaster - Invest Like Master</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="loginsignup.css" />
+	<title>Sign in</title>
 </head>
 
 <body>
-    <!-- Navigation Bar -->
-    <header>
-        <nav>
-            <div class="container">
-                <div id="logo">
-                    <a href="index.html"><img src="images/logo.png" alt="MarketMaster Logo" /></a>
-                </div>
-                <ul id="navbar">
-                    <li>
-                        <a href="index.html"><i class="fas fa-home"></i> Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
-                    </li>
-                    <li>
-                        <a href="contactus.html"><i class="fas fa-envelope"></i> Contact Us</a>
-                    </li>
-                    <li>
-                        <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
-                    </li>
-                    <li>
-                        <a href="signup.html"><i class="fas fa-user-plus"></i> Sign Up</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <div class="login-container">
-        <h2>Login with Market Master</h2>
-        <form id="login-form">
-            <label for="email"><i class="fas fa-envelope"></i> Email</label>
-            <input type="email" id="email" name="email" required>
-            <br>
-            <label for="password"><i class="fas fa-lock"></i> Password</label>
-            <input type="password" id="password" name="password" required>
-            <br>
-            <input type="submit" value="Login" id="loginButton">
-            <p>Not registered yet? <a href="signup.html">Sign Up</a></p>
 
-        </form>
-    </div>
-
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2023 MarketMaster. All rights reserved.</p>
-
-            <div class="footer-icons">
-                <a href="mailto:jaydeeppatidar535@gmail.com" class="footer-icon">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://github.com/JaydeepPatidar535/Market-Master" target="_blank" class="footer-icon">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
-            <p>Contact: +91 9644190657</p>
-        </div>
-    </footer>
+	<div class="container">
+		<div class="forms-container">
+			<div class="signin-signup">
+				<form class="sign-in-form" id="login-form">
+					<h2 class="title">Sign in</h2>
+					<div class="input-field">
+						<i class="fas fa-envelope"></i>
+						<input type="text" placeholder="Email" id="email"/>
+					</div>
+					<div class="input-field">
+						<i class="fas fa-lock"></i>
+						<input type="password" placeholder="Password" id="password" />
+					</div>
+					<input type="submit" value="Login" class="btn solid" id="loginButton" />
+					<p class="social-text"><a href="forgot-password.html">Forgot Password?</a></p> 
+					<p class="social-text">Or Sign in with </p>
+					<div class="social-media">
+						<a href="#" class="social-icon">
+							<i class="fab fa-google"></i>
+						</a>
+                        <a href="#" class="social-icon">
+							<i class="fas fa-phone"></i>
+						</a>
+					</div>
+					<p class="social-text" >Don't have account? <a href="signup.html">Sign up</a></p>
+					
+				</form>
+				
+			</div>
+		</div>
+		<div class="panels-container">
+			<div class="panel left-panel">
+				<div class="content">
+					<h3>Go to Homepage</h3>
+					<p>
+						
+					</p>
+					<a href="index.html"><button class="btn transparent" id="home-btn">
+						<i class="fas fa-home"></i> Home
+					</button></a>
+				</div>
+				<img  src="https://i.ibb.co/6HXL6q1/Privacy-policy-rafiki.png" class="image" alt="" />
+			</div>
+			
+		</div>
+	</div>
 </body>
 <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
