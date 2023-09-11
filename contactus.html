@@ -57,16 +57,16 @@
       <p class="description">Feel free to contact us if you need any assistance, any help or another question.
       </p>
       <div>
-        <input type="text" class="form-control rounded border-white mb-3 form-input" id="name" placeholder="Name" required>
+        <input type="text" class="form-control rounded border-white mb-3 form-input" name="Name" id="name" placeholder="Name" required>
       </div>
       <div>
-        <input type="email" class="form-control rounded border-white mb-3 form-input" id="email" placeholder="Email" required>
+        <input type="email" class="form-control rounded border-white mb-3 form-input" name="Email" id="email" placeholder="Email" required>
       </div>
       <div>
-        <input type="text" class="form-control rounded border-white mb-3 form-input" id="number" placeholder="Phone Number" required>
+        <input type="text" class="form-control rounded border-white mb-3 form-input" name="Number" id="number" placeholder="Phone Number" required>
       </div>
       <div>
-        <textarea id="message" class="form-control rounded border-white mb-3 form-text-area" rows="5" cols="30" placeholder="Message" id="message" required></textarea>
+        <textarea id="message" class="form-control rounded border-white mb-3 form-text-area" rows="5" cols="30" name="Message" placeholder="Message" id="message" required></textarea>
       </div>
       <div class="submit-button-wrapper">
         <input type="submit" value="Send">
@@ -74,17 +74,17 @@
     </form>
   </div>
   <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxbZptVuRWkqMsWqt0V0vqMOwSUxxyHvueEmf5xcQMfmfJkcxPZUYxbKISlVHmhx09W/exec'
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxoN-tGv2PSDrKonSvIlea5FgYasNRUZFE5wU2KkaEpR799G7DfqYGOfQTRcDQqixjn/exec'
     const form = document.forms['contactForm']
-  
+    
     form.addEventListener('submit', e => {
       e.preventDefault()
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => alert("Thank you! your form is submitted successfully." ))
-        .then(() => {  window.location.reload(); })
-        .catch(error => console.error('Error!', error.message))
+      .then(response => alert("Thank you! your form is submitted successfully." ))
+      .then(() => {  window.location.reload(); })
+      .catch(error => console.error('Error!', error.message))
     })
-  </script>
+    </script>
   <footer>
     <div class="footer-content">
       <p>&copy; 2023 MarketMaster. All rights reserved.</p>
